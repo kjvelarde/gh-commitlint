@@ -25,12 +25,12 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-    - run: echo ${{github | json}}
+    - run: echo ${{github}}
     - run: echo ${{github.title}}
     - name: Pull request linter action
       # You may pin to the exact commit or the version.
       # uses: JulienKode/pull-request-name-linter-action@2d32d4e7eb34ae4ff9c3c3ba0f5eaadb27bb0f2d
-      uses: JulienKode/pull-request-name-linter-action@v0.2.0
+      uses: wagoid/commitlint-github-action@v2.0.3
       with:
         # The path for the commitlint configurations
         configuration-path: ./.commitlintrc.prod.js
