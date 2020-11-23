@@ -9,8 +9,11 @@ on:
   pull_request:
     branches: [ main ]
   commit_comment:
+    branches: [ main ]
   pull_request_review:
+    branches: [ main ]
   pull_request_review_comment:
+    branches: [ main ]
 
 jobs:
   build:
