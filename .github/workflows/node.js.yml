@@ -27,7 +27,7 @@ jobs:
     - name: npm install, validate
       run: |
         npm ci
-        echo ${{github.context.payload?.pull_request}}
+        echo ${{github.context}}
     - name: Commit Linter
       # You may pin to the exact commit or the version.
       # uses: wagoid/commitlint-github-action@2d572ed5ea8b369af534fa21eea186a7eef07cda
