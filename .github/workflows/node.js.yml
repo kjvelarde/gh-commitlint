@@ -26,7 +26,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: echo ${{github}}
-    - run: echo ${{GITHUB_EVENT_NAME}}
+    - run: echo ${{secrets.token}}
     - name: Pull request linter action
       # You may pin to the exact commit or the version.
       # uses: JulienKode/pull-request-name-linter-action@2d32d4e7eb34ae4ff9c3c3ba0f5eaadb27bb0f2d
@@ -34,5 +34,6 @@ jobs:
       with:
         # The path for the commitlint configurations
         configFile: ./.commitlintrc.prod.js
+        token: ${{ secrets.GITHUB_TOKEN }}
         #configuration-path: ./.commitlintrc.prod.js
        
