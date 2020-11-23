@@ -25,7 +25,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-    - run: echo ${{github}}
+    - run: echo ${{github | json}}
     - run: echo ${{github.title}}
     - name: Pull request linter action
       # You may pin to the exact commit or the version.
