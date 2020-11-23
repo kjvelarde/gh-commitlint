@@ -24,7 +24,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Opinionated-commit-message  
-      uses: mristin/opinionated-commit-message@v2.2.0  
     - run: npm ci
+    - run: echo "$COMMIT_MESSAGE" | npx commitlint
 
