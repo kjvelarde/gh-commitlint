@@ -4,7 +4,8 @@
   "description": "integration for commit validation and ci",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "validate": "commitlint --config .commitlintrc.prod.js -c blue --from HEAD~1 --to HEAD --verbose"
   },
   "repository": {
     "type": "git",
