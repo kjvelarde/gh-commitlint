@@ -33,5 +33,6 @@ jobs:
       uses: wagoid/commitlint-github-action@v2.0.3
       with:
         # The path for the commitlint configurations
-        configuration-path: ./.commitlintrc.prod.js
+        configFile: ./.commitlintrc.prod.js
+        #configuration-path: ./.commitlintrc.prod.js
        
