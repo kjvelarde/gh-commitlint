@@ -24,8 +24,15 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, validate
-      run: |
-        npm ci
-        echo {{github.context.payload?.pull_request}}
+    - name: Pull request linter action
+      # You may pin to the exact commit or the version.
+      # uses: JulienKode/pull-request-name-linter-action@2d32d4e7eb34ae4ff9c3c3ba0f5eaadb27bb0f2d
+      uses: JulienKode/pull-request-name-linter-action@v0.2.0
+      with:
+        # The path for the commitlint configurations
+        configuration-path: ./commitlint.prod.config.js
+    #- name: npm install, validate
+     # run: |
+    #    npm ci
+     #   echo {{github.context.payload?.pull_request}}
 
