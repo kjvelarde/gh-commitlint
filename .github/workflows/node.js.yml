@@ -28,12 +28,11 @@ jobs:
       run: |
         npm ci
         echo ${{github.context}}
-    - name: Commit Linter
+    - name: Pull request linter action
       # You may pin to the exact commit or the version.
-      # uses: wagoid/commitlint-github-action@2d572ed5ea8b369af534fa21eea186a7eef07cda
-      uses: wagoid/commitlint-github-action@v2.0.3
+      # uses: JulienKode/pull-request-name-linter-action@2d32d4e7eb34ae4ff9c3c3ba0f5eaadb27bb0f2d
+      uses: JulienKode/pull-request-name-linter-action@v0.2.0
       with:
-        # Commitlint config file. If the file doesn't exist, config-conventional settings will be loaded as a fallback.
-        configFile: ./commitlint.prod.config.js
-        failOnWarnings: true
+        # The path for the commitlint configurations
+        configuration-path: ./.commitlintrc.prod.js
        
