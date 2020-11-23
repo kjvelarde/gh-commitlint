@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "validate": "commitlint --from HEAD~1 --verbose"
+    "validate": "npx commitlint --from HEAD~1 --verbose"
   },
   "repository": {
     "type": "git",
