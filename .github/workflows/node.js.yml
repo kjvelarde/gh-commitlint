@@ -38,5 +38,5 @@ jobs:
       uses: JulienKode/pull-request-name-linter-action@v0.2.0
       with:
         # The path for the commitlint configurations
-        configuration-path: ./.commitlintrc.prod.js
+        configuration-path: ./.commitlintrc.js
        
